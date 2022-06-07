@@ -105,7 +105,7 @@ export default {
         },
          
         getData(){
-          fetch('http://localhost:8000/api/operators')
+          fetch('http://192.168.1.4:8000/api/operators')
           .then(response=>response.json())
           .then(data=>this.operators = data)
           .catch(err=>console.log(err) )
@@ -121,7 +121,7 @@ export default {
         },
            
          submitOperator()  {
-               fetch('http://localhost:8000/api/operators', {
+               fetch('http://192.168.1.4:8000/api/operators', {
                    method: 'post',
                    headers: {
                        "Content-Type":"application/json"
