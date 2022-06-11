@@ -102,7 +102,7 @@ export default{
            }
        },
        saveBooking(){
-                fetch('http://192.168.1.4:8000/api/bookings/' + this.booking.id,{
+                fetch('http://192.168.1.2:8000/api/bookings/' + this.booking.id,{
                     method: 'put',
                     headers: {
                         'Content-Type' : "application/json"
@@ -119,7 +119,7 @@ export default{
                  .catch(err => console.log(err))
        },
           deleteBooking(){
-                 fetch('http://192.168.1.4:8000/api/bookings/' + this.booking.id,{
+                 fetch('http://192.168.1.2:8000/api/bookings/' + this.booking.id,{
                        method:'delete'
                  })
                  .then(res=>res.json())
@@ -135,7 +135,7 @@ export default{
    },
 
    mounted(){
-       fetch('http://192.168.1.4:8000/api/bookings/' + this.id)
+       fetch('http://192.168.1.2:8000/api/bookings/' + this.id)
        .then(res => res.json())
        .then(data => this.booking = data)
        .then(err => console.log(err))

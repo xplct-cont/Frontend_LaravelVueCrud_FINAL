@@ -121,7 +121,7 @@ export default {
         },
          
         getData(){
-          fetch('http://192.168.1.4:8000/api/bookings')
+          fetch('http://192.168.1.2:8000/api/bookings')
           .then(response=>response.json())
           .then(data=>this.bookings = data)
           .catch(err=>console.log(err) )
@@ -137,7 +137,7 @@ export default {
         },
            
          submitBooking()  {
-               fetch('http://192.168.1.4:8000/api/bookings', {
+               fetch('http://192.168.1.2:8000/api/bookings', {
                    method: 'post',
                    headers: {
                        "Content-Type":"application/json"

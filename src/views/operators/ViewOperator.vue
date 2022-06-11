@@ -86,7 +86,7 @@ export default{
            }
        },
        saveOperator(){
-                fetch('http://192.168.1.4:8000/api/operators/' + this.operator.id,{
+                fetch('http://192.168.1.2:8000/api/operators/' + this.operator.id,{
                     method: 'put',
                     headers: {
                         'Content-Type' : "application/json"
@@ -103,7 +103,7 @@ export default{
                  .catch(err => console.log(err))
        },
           deleteOperator(){
-                 fetch('http://192.168.1.4:8000/api/operators/' + this.operator.id,{
+                 fetch('http://192.168.1.2:8000/api/operators/' + this.operator.id,{
                        method:'delete'
                  })
                  .then(res=>res.json())
@@ -119,7 +119,7 @@ export default{
    },
 
    mounted(){
-       fetch('http://192.168.1.4:8000/api/operators/' + this.id)
+       fetch('http://192.168.1.2:8000/api/operators/' + this.id)
        .then(res => res.json())
        .then(data => this.operator = data)
        .then(err => console.log(err))
